@@ -154,6 +154,12 @@ class TaxHolidayVisitor implements Visitor {
 public class VisitorTest {
 	public static void main(String[] args) {
 
+		/* No pattern */
+		// Necessity milk = new Necessity(3.47);
+		// milk.taxCalc();
+		// milk.taxHolidayCalc();
+
+		/* Use Pattern */
 		TaxVisitor taxCalc = new TaxVisitor();
 		TaxHolidayVisitor taxHolidayCalc = new TaxHolidayVisitor();
 
