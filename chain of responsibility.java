@@ -2,7 +2,7 @@ abstract class Handler {
     protected Handler next;
     Handler(Handler next) {
         this.next = next;
-    }    
+    }
     void doNext(char c) {
         if(next != null) {
            next.handle(c);
@@ -24,10 +24,10 @@ class SymbolHandler extends Handler {
 class CharacterHandler extends Handler {
     CharacterHandler(Handler next) {
         super(next);
-    }    
+    }
     void handle(char c) {
         if(Character.isLetter(c)) {
-            System.out.println("Character has been handled"); 
+            System.out.println("Character has been handled");
         }
         doNext(c);
     }
@@ -36,10 +36,10 @@ class CharacterHandler extends Handler {
 class DigitHandler extends Handler {
     DigitHandler(Handler next) {
         super(next);
-    }    
-    void handle(char c) { 
+    }
+    void handle(char c) {
        if(Character.isDigit(c)) {
-            System.out.println("Digit has been handled"); 
+            System.out.println("Digit has been handled");
        }
        doNext(c);
     }
@@ -52,6 +52,6 @@ public class Main {
                               new DigitHandler(null)));
         handler.handle('A');
         handler.handle('1');
-	//test2
+	//test3
     }
 }
