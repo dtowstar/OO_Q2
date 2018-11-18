@@ -52,5 +52,6 @@ public class Main {
                               new DigitHandler(null)));
         handler.handle('A');
         handler.handle('1');
+	//test
     }
 }
